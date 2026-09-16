@@ -141,17 +141,17 @@ body {
 
 /* Slider image order */
 .slide:nth-child(1) {
-    background-image: url("photos/photo_5861603114991948092_y.jpg");
+    background-image: url("first_product/photo_5861603114991948092_y.jpg");
     animation-delay: 0s;
 }
 
 .slide:nth-child(2) {
-    background-image: url("photos/ChatGPT Image.png");
+    background-image: url("first_product/ChatGPT Image.png");
     animation-delay: 12s;
 }
 
 .slide:nth-child(3) {
-    background-image: url("photos/Gemini_Generated.jpg");
+    background-image: url("first_product/Gemini_Generated.jpg");
     animation-delay: 24s;
 }
 
