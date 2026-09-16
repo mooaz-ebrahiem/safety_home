@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protect your self</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- <============NAVBAR====================> -->
+    <header class="navbar">
+        <div class="logo">
+            Safety Home
+        </div>
+        <nav>
+            <a href="#home">الرئيسيه</a>
+            <a href="#product">المنتجات</a>
+        </nav>
+    </header>
+<!-- <========================HOME====================> --> 
+<section id="home" class="hero">
+
+    <!-- Slider -->
+    <div class="slider-container">
+
+        <div
+            class="slide active"
+            style="background-image: url('photos/photo_5861603114991948092_y.jpg');">
+        </div>
+
+        <div
+            class="slide"
+            style="background-image: url('photos/ChatGPT Image.png');">
+        </div>
+
+        <div
+            class="slide"
+            style="background-image: url('photos/Gemini_Generated_Image.jpg');">
+        </div>
+
+    </div>
+
+
+    <!-- طبقة شفافة فوق الصور -->
+    <div class="hero-overlay"></div>
+
+
+    <!-- محتوى الـHero -->
+    <div class="hero-content">
+
+        <h1>
+           حافظ علي نفسك
+        </h1>
+
+        <p id="home_page">
+            نوفر لك مجموعة من المنتجات التي تساعدك علي الحفاظ علي نفسك وعلي اسرتك 
+        </p>
+
+        <!-- <button
+            class="cta-btn"
+            onclick="bookNow()">
+            احجز رحلتك الآن
+        </button> -->
+
+    </div>
+
+</section>
+<section id="product" class="services-section">
+    <div class="products-container">
+        <h2>المنتجات</h2>
+        <p>تعرف على منتجاتنا المتميزة</p>
+        <div class="products-grid">
+
+
+<!-- 1 -->
+        <article class="product-card product-details-trigger" data-details-modal="gas-detector-details" tabindex="0" role="button" aria-label="عرض تفاصيل كاشف تسريبات الغاز">
+            <div class="image-box">
+                <!-- بدون target="_blank" لكي تفتح في نفس الصفحة -->
+                
+                    <img class="product-image"
+                        src="photos/photo_5861603114991948090_y.jpg"
+                        alt="كاشف تسريبات غاز"
+                    >
+                
+            </div>
+            <h3>كاشف تسريبات غاز</h3>
+            <p>للحماية من تسريب الغاز </p>
+            <p class="product-price">300 جنيه</p>
+            <button class="booking-button" type="button" data-product="كاشف تسريبات غاز ">
+                احجز الآن عبر واتساب
+            </button>
+        </article>
+
+
+<!-- 2 -->
+        <article class="product-card product-details-trigger" data-details-modal="flame-detector-details" tabindex="0" role="button" aria-label="عرض تفاصيل كاشف الغاز واللهب">
+            <div class="image-box">
+                <!-- بدون target="_blank" لكي تفتح في نفس الصفحة -->
+
+                    <img class="product-image"
+                        src="https://i.pinimg.com/736x/ba/60/87/ba6087c683b5eb94bdec469730662aa5.jpg"
+                        alt="كاشف الغاز واللهب"
+                    >
+            
+            </div>
+            <h3>كاشف الغاز واللهب</h3>
+            <p>للحماية من تسريب الغاز و النيران</p>
+            <p class="product-price" dir="rtl">
+                <span class="current-price" dir="ltr">350 جنيه</span>
+                <del class="old-price" dir="ltr">370 جنيه</del>
+            </p>
+
+            <button class="booking-button" type="button" data-product="كاشف تسريبات غاز و اللهب">
+                احجز الآن عبر واتساب
+            </button>
+        </article>
+
+<!-- 3   مؤجل-->
+<!--
+ <div>
+        <article class="product-card">
+            <div class="image-box">
+                <a href="cars/cars_expensive.html">
+                    <img class="product-image"
+                        src="https://i.pinimg.com/736x/ba/60/87/ba6087c683b5eb94bdec469730662aa5.jpg"
+                        alt="سيارات فخمة"
+                    >
+                </a>
+            </div>
+            <h3>كاشف تسريبات غاز</h3>
+            <p>مكيفة، سائق محترف، وتوصيل من وإلى المطار.</p>
+            <button class="booking-button" type="button" data-product="كاشف تسريبات غاز">
+                احجز الآن عبر واتساب
+            </button>
+        </article>
+
+
+
+        <article class="product-card">
+            <div class="image-box">
+                <a href="cars/cars_expensive.html">
+                    <img class="product-image"
+                        src="https://i.pinimg.com/736x/ba/60/87/ba6087c683b5eb94bdec469730662aa5.jpg"
+                        alt="سيارات فخمة"
+                    >
+                </a>
+            </div>
+            <h3>سيارات سيدان فخمة</h3>
+            <p>مكيفة، سائق محترف، وتوصيل من وإلى المطار.</p>
+            <button class="booking-button" type="button" data-product="سيارات سيدان فخمة">
+                احجز الآن عبر واتساب
+            </button>
+        </article>
+
+
+
+        <article class="product-card">
+            <div class="image-box">
+                <a href="cars/cars_expensive.html">
+                    <img class="product-image"
+                        src="https://i.pinimg.com/736x/ba/60/87/ba6087c683b5eb94bdec469730662aa5.jpg"
+                        alt="سيارات فخمة"
+                    >
+                </a>
+            </div>
+            <h3>سيارات سيدان فخمة</h3>
+            <p>مكيفة، سائق محترف، وتوصيل من وإلى المطار.</p>
+            <button class="booking-button" type="button" data-product="سيارات سيدان فخمة">
+                احجز الآن عبر واتساب
+            </button>
+        </article>
+
+
+        <article class="product-card">
+            <div class="image-box">
+                <a href="cars/cars_expensive.html">
+                    <img class="product-image"
+                        src="https://i.pinimg.com/736x/ba/60/87/ba6087c683b5eb94bdec469730662aa5.jpg"
+                        alt="سيارات فخمة"
+                    >
+                </a>
+            </div>
+            <h3>سيارات سيدان فخمة</h3>
+            <p>مكيفة، سائق محترف، وتوصيل من وإلى المطار.</p>
+            <button class="booking-button" type="button" data-product="سيارات سيدان فخمة">
+                احجز الآن عبر واتساب
+            </button>
+        </article>
+        </div>
+    -->
+        </div>
+    </div>
+</section>
+
+<div class="product-modal" id="gas-detector-details" hidden>
+    <div class="product-modal-content" role="dialog" aria-modal="true" aria-labelledby="details-title">
+        <button class="modal-close" type="button" aria-label="إغلاق">&times;</button>
+        <h2 id="details-title">تفاصيل كاشف تسريبات الغاز</h2>
+        <div class="details-images">
+            <img class="details-image" src="photos/photo_5861603114991948092_y.jpg" alt="كاشف تسريبات الغاز">
+            <img class="details-image" src="photos/photo_5861603114991948091_y.jpg" alt="كاشف تسريبات الغاز">
+            <img class="details-image" src="photos/photo_5861603114991948088_y.jpg" alt="كاشف تسريبات الغاز">
+        </div>
+        <p class="details-description">
+            هذا المنتج مصمم للكشف عن تسريبات الغاز في المنزل أو المكتب، ويساعد في الحماية من المخاطر الناتجة عن التسريب.
+            <br>
+            إذا كنت تحتاج إلى إضافة أي ميزة أو تعديل، يمكنك طلب ما تريده، وإن شاء الله سننفذه لك.
+        </p>
+        
+        <button class="booking-button" type="button" data-product="كاشف تسريبات غاز">احجز الآن عبر واتساب</button>
+    </div>
+</div>
+
+<div class="product-modal" id="flame-detector-details" hidden>
+    <div class="product-modal-content" role="dialog" aria-modal="true" aria-labelledby="flame-details-title">
+        <button class="modal-close" type="button" aria-label="إغلاق">&times;</button>
+        <h2 id="flame-details-title">تفاصيل كاشف الغاز واللهب</h2>
+        <div class="details-images">
+            <img class="details-image" src="photos/photo_5861603114991948090_y.jpg" alt="كاشف الغاز واللهب">
+            <img class="details-image" src="photos/photo_5861603114991948091_y.jpg" alt="كاشف الغاز واللهب">
+            <img class="details-image" src="photos/photo_5861603114991948088_y.jpg" alt="كاشف الغاز واللهب">
+        </div>
+        <p class="details-description">
+            هذا المنتج يساعد على اكتشاف تسريبات الغاز ووجود اللهب، مما يوفر حماية إضافية للمنزل والأسرة.
+            <br>
+            إذا كنت تحتاج إلى إضافة أي ميزة أو تعديل، يمكنك طلب ما تريده، وإن شاء الله سننفذه لك.
+  
+        </p>
+        <button class="booking-button" type="button" data-product="كاشف الغاز واللهب">احجز الآن عبر واتساب</button>
+    </div>
+</div>
+
+
+
+
+
+
+<footer>
+    <p>للتواصل والاستفسار</p>
+    <a href="tel:+201287957733">01287957733</a>
+</footer>
+
+
+
+</body>
+</html>
