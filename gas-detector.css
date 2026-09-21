@@ -1,0 +1,388 @@
+/* =========================================================
+   صفحة كاشف تسريبات الغاز — كل الـ id والـ class تبدأ بـ gd-
+   عشان متتعارضش مع style.css
+========================================================= */
+
+#gd-page {
+    --gd-blue: #0A3D62;
+    --gd-blue-dark: #062A43;
+    --gd-orange: #E67E22;
+    --gd-orange-hover: #F39C12;
+    --gd-text: #2C3E50;
+    --gd-bg: #f4f7f8;
+    --gd-white: #fff;
+    --gd-border: rgba(10, 61, 98, 0.15);
+
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: var(--gd-bg);
+    color: var(--gd-text);
+    line-height: 1.9;
+}
+
+#gd-page *,
+#gd-page *::before,
+#gd-page *::after {
+    box-sizing: border-box;
+}
+
+/* ---------- الشريط العلوي ---------- */
+#gd-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 6%;
+    background: var(--gd-blue-dark);
+}
+
+#gd-brand {
+    color: var(--gd-orange);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+#gd-back-link {
+    color: var(--gd-white);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#gd-back-link:hover {
+    color: var(--gd-orange);
+}
+
+/* ---------- الحاوية والأقسام ---------- */
+#gd-main {
+    width: min(1050px, 92%);
+    margin: 0 auto;
+    padding: 40px 0 60px;
+}
+
+.gd-section {
+    margin-bottom: 28px;
+    padding: 28px;
+    border-radius: 8px;
+    background: var(--gd-white);
+    box-shadow: 0 8px 22px rgba(10, 61, 98, 0.08);
+}
+
+.gd-section-title {
+    margin: 0 0 16px;
+    color: var(--gd-blue);
+    font-size: 1.6rem;
+}
+
+.gd-product-video {
+    display: block;
+    width: 100%;
+    max-height: 560px;
+    border-radius: 8px;
+    background: #000;
+}
+
+.gd-text {
+    margin: 0 0 12px;
+    max-width: 70ch;
+}
+
+.gd-trust-list {
+    margin: 14px 0 20px;
+    padding: 0 20px 0 0;
+    color: var(--gd-text);
+    font-size: 0.95rem;
+}
+
+.gd-table-wrap {
+    overflow-x: auto;
+}
+
+.gd-specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.gd-specs-table th,
+.gd-specs-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--gd-border);
+    text-align: right;
+}
+
+.gd-specs-table th {
+    width: 38%;
+    color: var(--gd-blue);
+}
+
+#gd-faq details {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gd-border);
+}
+
+#gd-faq summary {
+    color: var(--gd-blue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.gd-cross-sell-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.gd-cross-sell-links a {
+    padding: 10px 14px;
+    border: 1px solid var(--gd-border);
+    border-radius: 6px;
+    color: var(--gd-blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.gd-floating-whatsapp,
+.fd-floating-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 20;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: #168c4b;
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+/* ---------- الصور + الملخص ---------- */
+#gd-overview {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+#gd-gallery-main {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #f9f9f9;
+    border: 1px solid var(--gd-border);
+}
+
+#gd-gallery-thumbs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.gd-thumb {
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background: #f9f9f9;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gd-thumb img {
+    display: block;
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}
+
+.gd-thumb.is-active {
+    border-color: var(--gd-orange);
+}
+
+.gd-thumb:focus-visible {
+    outline: 3px solid rgba(230, 126, 34, 0.4);
+    outline-offset: 2px;
+}
+
+#gd-title {
+    margin: 0 0 8px;
+    color: var(--gd-blue);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.3;
+}
+
+#gd-tagline {
+    margin: 0 0 16px;
+    font-size: 1.1rem;
+}
+
+#gd-price {
+    margin: 0 0 20px;
+    color: var(--gd-orange);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* ---------- الأزرار ---------- */
+.gd-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--gd-orange);
+    color: var(--gd-white);
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.gd-btn:hover {
+    background: var(--gd-orange-hover);
+}
+
+.gd-btn:focus-visible {
+    outline: 3px solid rgba(230, 126, 34, 0.4);
+    outline-offset: 3px;
+}
+
+.gd-btn-dark {
+    width: auto;
+    justify-self: start;
+    padding: 10px 22px;
+    background: var(--gd-blue);
+}
+
+.gd-btn-dark:hover {
+    background: var(--gd-blue-dark);
+}
+
+#gd-book-btn-bottom {
+    width: min(360px, 100%);
+    margin: 0 auto;
+}
+
+/* ---------- آراء العملاء ---------- */
+#gd-wa-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.gd-wa-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid var(--gd-border);
+    background: var(--gd-bg);
+}
+
+.gd-empty {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 18px;
+    border: 1px dashed rgba(10, 61, 98, 0.3);
+    border-radius: 6px;
+    text-align: center;
+}
+
+#gd-review-list {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.gd-review-item {
+    padding: 14px;
+    border-right: 3px solid var(--gd-orange);
+    background: var(--gd-bg);
+}
+
+.gd-review-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+}
+
+.gd-review-stars {
+    color: var(--gd-orange);
+}
+
+.gd-review-comment {
+    margin: 0;
+}
+
+#gd-review-form {
+    display: grid;
+    gap: 8px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gd-border);
+}
+
+#gd-review-form-title {
+    margin: 0 0 4px;
+    color: var(--gd-blue);
+}
+
+#gd-review-form label {
+    color: var(--gd-blue);
+    font-weight: 700;
+}
+
+#gd-review-form input,
+#gd-review-form select,
+#gd-review-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--gd-border);
+    border-radius: 4px;
+    font: inherit;
+    color: var(--gd-text);
+    background: var(--gd-white);
+}
+
+#gd-review-form textarea {
+    resize: vertical;
+}
+
+/* ---------- الفوتر ---------- */
+#gd-footer {
+    padding: 28px 6%;
+    background: var(--gd-blue);
+    color: var(--gd-white);
+    text-align: center;
+}
+
+#gd-footer p {
+    margin: 0 0 6px;
+}
+
+#gd-footer a {
+    color: var(--gd-orange);
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* ---------- موبايل ---------- */
+@media (max-width: 700px) {
+    #gd-overview {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gd-section {
+        padding: 20px 16px;
+    }
+
+    .gd-thumb img {
+        height: 70px;
+    }
+}

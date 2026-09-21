@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,7 @@
         <nav>
             <a href="#home">الرئيسيه</a>
             <a href="#product">المنتجات</a>
+            <a href="#component">العناصر</a>
         </nav>
     </header>
 <!-- <========================HOME====================> --> 
@@ -75,17 +76,19 @@
 
 
 <!-- 1 -->
-        <article class="product-card product-details-trigger" data-details-modal="gas-detector-details" tabindex="0" role="button" aria-label="عرض تفاصيل كاشف تسريبات الغاز">
+        <article class="product-card product-details-trigger" data-page-url="gas-detector.html" data-details-page="product-details.html?product=gas-detector" tabindex="0" role="button" aria-label="عرض تفاصيل كاشف تسريبات الغاز">
             <div class="image-box">
                 <!-- بدون target="_blank" لكي تفتح في نفس الصفحة -->
                 
                     <img class="product-image"
-                        src="first_product/photo_5861603114991948090_y.jpg"
+                        src="photos_general/photo_5875012110264242319_y.jpg"
+                        loading="lazy"
                         alt="كاشف تسريبات غاز"
                     >
                 
             </div>
             <h3>كاشف تسريبات غاز</h3>
+            <span class="stock-badge">متوفر</span>
             <p>للحماية من تسريب الغاز </p>
             <p class="product-price">300 جنيه</p>
             <button class="booking-button" type="button" data-product="كاشف تسريبات غاز ">
@@ -95,17 +98,19 @@
 
 
 <!-- 2 -->
-        <article class="product-card product-details-trigger" data-details-modal="flame-detector-details" tabindex="0" role="button" aria-label="عرض تفاصيل كاشف الغاز واللهب">
+        <article class="product-card product-details-trigger" data-page-url="flame-detector.html" data-details-page="product-details.html?product=flame-detector" tabindex="0" role="button" aria-label="عرض تفاصيل كاشف الغاز واللهب">
             <div class="image-box">
                 <!-- بدون target="_blank" لكي تفتح في نفس الصفحة -->
 
                     <img class="product-image"
-                        src="https://i.pinimg.com/736x/ba/60/87/ba6087c683b5eb94bdec469730662aa5.jpg"
+                        src="photos_general/IMG20260921011718.jpg"
+                        loading="lazy"
                         alt="كاشف الغاز واللهب"
                     >
             
             </div>
             <h3>كاشف الغاز واللهب</h3>
+            <span class="stock-badge">متوفر</span>
             <p>للحماية من تسريب الغاز و النيران</p>
             <p class="product-price" dir="rtl">
                 <span class="current-price" dir="ltr">350 جنيه</span>
@@ -194,6 +199,73 @@
     </div>
 </section>
 
+
+
+
+<section id="component" class="services-section">
+    <div class="products-container">
+        <h2>العناصر</h2>
+        <p>تعرف على منتجاتنا المتميزة</p>
+        <div class="products-grid">
+
+
+            
+<!-- 1 -->
+        <article class="product-card">
+            <div class="image-box">
+                <!-- بدون target="_blank" لكي تفتح في نفس الصفحة -->
+                
+                    <img class="product-image"
+                        src="photos_general/batteries/photo_5875012110264242312_y.jpg"
+                        loading="lazy"
+                        alt="يطاريه ليثيوم 18650"
+                    >
+                
+            </div>
+            <h3>يطاريه ليثيوم 18650</h3>
+            <p>متعدد الاستخدامات</p>
+            <p class="product-price">50 جنيه</p>
+            <button class="booking-button" type="button" data-product="بطارية ليثيوم 18650">
+                احجز الآن عبر واتساب
+            </button>
+        </article>
+
+
+<!-- 2 -->
+        <article class="product-card">
+            <div class="image-box">
+                <!-- بدون target="_blank" لكي تفتح في نفس الصفحة -->
+
+                    <img class="product-image"
+                        src="photos_general/photo_5875012110264242307_y.jpg"
+                        loading="lazy"
+                        alt="Adapter 5v 1A"
+                    >
+            
+            </div>
+            <h3>Adapter 5v 1A</h3>
+            <p>متعدد الاستخدامات</p>
+            <p class="product-price" dir="rtl">
+                <span class="current-price" dir="ltr">60 جنيه</span>
+            </p>
+
+            <button class="booking-button" type="button" data-product="Adapter 5v 1A">
+                احجز الآن عبر واتساب
+            </button>
+        </article>
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
 <div class="product-modal" id="gas-detector-details" hidden>
     <div class="product-modal-content" role="dialog" aria-modal="true" aria-labelledby="details-title">
         <button class="modal-close" type="button" aria-label="إغلاق">&times;</button>
@@ -203,11 +275,42 @@
             <img class="details-image" src="first_product/photo_5861603114991948091_y.jpg" alt="كاشف تسريبات الغاز">
             <img class="details-image" src="first_product/photo_5861603114991948088_y.jpg" alt="كاشف تسريبات الغاز">
         </div>
+        <div class="whatsapp-reviews-gallery" aria-label="صور مراجعات واتساب">
+            <img class="whatsapp-review-image" src="first_product/review-1.jpg" alt="مراجعة واتساب عن كاشف تسريبات الغاز">
+            <img class="whatsapp-review-image" src="first_product/review-2.jpg" alt="مراجعة واتساب عن كاشف تسريبات الغاز">
+            <img class="whatsapp-review-image" src="first_product/review-3.jpg" alt="مراجعة واتساب عن كاشف تسريبات الغاز">
+        </div>
         <p class="details-description">
             هذا المنتج مصمم للكشف عن تسريبات الغاز في المنزل أو المكتب، ويساعد في الحماية من المخاطر الناتجة عن التسريب.
             <br>
             إذا كنت تحتاج إلى إضافة أي ميزة أو تعديل، يمكنك طلب ما تريده، وإن شاء الله سننفذه لك.
         </p>
+
+        <section class="reviews-section" data-review-product="gas-detector" aria-labelledby="gas-reviews-title">
+            <h3 id="gas-reviews-title">آراء العملاء</h3>
+            <div class="reviews-list" aria-live="polite"></div>
+            <form class="review-form">
+                <label>
+                    الاسم
+                    <input type="text" name="reviewer" maxlength="40" required>
+                </label>
+                <label>
+                    التقييم
+                    <select name="rating" required>
+                        <option value="5">5 نجوم</option>
+                        <option value="4">4 نجوم</option>
+                        <option value="3">3 نجوم</option>
+                        <option value="2">نجمتان</option>
+                        <option value="1">نجمة واحدة</option>
+                    </select>
+                </label>
+                <label>
+                    رأيك في المنتج
+                    <textarea name="comment" rows="3" maxlength="300" required></textarea>
+                </label>
+                <button class="review-submit" type="submit">إضافة المراجعة</button>
+            </form>
+        </section>
         
         <button class="booking-button" type="button" data-product="كاشف تسريبات غاز">احجز الآن عبر واتساب</button>
     </div>
@@ -222,12 +325,42 @@
             <img class="details-image" src="first_product/photo_5861603114991948091_y.jpg" alt="كاشف الغاز واللهب">
             <img class="details-image" src="first_product/photo_5861603114991948088_y.jpg" alt="كاشف الغاز واللهب">
         </div>
+        <div class="whatsapp-reviews-gallery" aria-label="صور مراجعات واتساب">
+            <img class="whatsapp-review-image" src="first_product/review-1.jpg" alt="مراجعة واتساب عن كاشف الغاز واللهب">
+            <img class="whatsapp-review-image" src="first_product/review-2.jpg" alt="مراجعة واتساب عن كاشف الغاز واللهب">
+            <img class="whatsapp-review-image" src="first_product/review-3.jpg" alt="مراجعة واتساب عن كاشف الغاز واللهب">
+        </div>
         <p class="details-description">
             هذا المنتج يساعد على اكتشاف تسريبات الغاز ووجود اللهب، مما يوفر حماية إضافية للمنزل والأسرة.
             <br>
             إذا كنت تحتاج إلى إضافة أي ميزة أو تعديل، يمكنك طلب ما تريده، وإن شاء الله سننفذه لك.
   
         </p>
+        <section class="reviews-section" data-review-product="flame-detector" aria-labelledby="flame-reviews-title">
+            <h3 id="flame-reviews-title">آراء العملاء</h3>
+            <div class="reviews-list" aria-live="polite"></div>
+            <form class="review-form">
+                <label>
+                    الاسم
+                    <input type="text" name="reviewer" maxlength="40" required>
+                </label>
+                <label>
+                    التقييم
+                    <select name="rating" required>
+                        <option value="5">5 نجوم</option>
+                        <option value="4">4 نجوم</option>
+                        <option value="3">3 نجوم</option>
+                        <option value="2">نجمتان</option>
+                        <option value="1">نجمة واحدة</option>
+                    </select>
+                </label>
+                <label>
+                    رأيك في المنتج
+                    <textarea name="comment" rows="3" maxlength="300" required></textarea>
+                </label>
+                <button class="review-submit" type="submit">إضافة المراجعة</button>
+            </form>
+        </section>
         <button class="booking-button" type="button" data-product="كاشف الغاز واللهب">احجز الآن عبر واتساب</button>
     </div>
 </div>
@@ -241,6 +374,8 @@
     <p>للتواصل والاستفسار</p>
     <a href="tel:+201287957733">01287957733</a>
 </footer>
+
+<a class="floating-whatsapp" href="https://wa.me/201287957733" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب">واتساب</a>
 
 
 

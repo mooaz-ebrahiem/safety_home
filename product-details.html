@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج | Safety Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="details-page">
+    <header class="navbar details-navbar">
+        <div class="logo">Safety Home</div>
+        <a class="back-link" href="index.html#product">العودة إلى المنتجات</a>
+    </header>
+
+    <main class="product-details-page">
+        <div class="details-page-header">
+            <p class="details-eyebrow">Safety Home</p>
+            <h1 id="product-title"></h1>
+            <p id="product-intro"></p>
+        </div>
+
+        <section class="details-page-section">
+            <h2>صور المنتج</h2>
+            <div id="product-images" class="product-gallery"></div>
+        </section>
+
+        <section class="details-page-section whatsapp-reviews-section">
+            <h2>مراجعات العملاء من واتساب</h2>
+            <p class="section-note">ضع screenshots المحادثات داخل مجلد المنتج بهذه الأسماء لتظهر هنا: <strong>review-1.jpg</strong> و<strong>review-2.jpg</strong>.</p>
+            <div id="whatsapp-reviews" class="whatsapp-reviews-gallery">
+                <p class="empty-gallery">لم تتم إضافة screenshots للمراجعات بعد.</p>
+            </div>
+        </section>
+
+        <section class="details-page-section product-story-section">
+            <h2>عن المنتج</h2>
+            <p id="product-description"></p>
+        </section>
+
+        <a id="booking-link" class="booking-button details-booking" href="#">احجز الآن عبر واتساب</a>
+    </main>
+
+    <script>
+        const products = {
+            "gas-detector": {
+                title: "كاشف تسريبات الغاز",
+                intro: "جهاز عملي يساعدك على اكتشاف تسربات الغاز مبكرًا وحماية المنزل والأسرة.",
+                description: "هذا المنتج مصمم للكشف عن تسريبات الغاز في المنزل أو المكتب، ويساعد في تقليل المخاطر الناتجة عن التسريب. مناسب لمن يريد إضافة وسيلة أمان إضافية إلى المكان.",
+                folder: "first_product",
+                images: ["photo_5861603114991948092_y.jpg", "photo_5861603114991948091_y.jpg", "photo_5861603114991948088_y.jpg"]
+            },
+            "flame-detector": {
+                title: "كاشف الغاز واللهب",
+                intro: "حل إضافي لاكتشاف تسريبات الغاز ووجود اللهب بسرعة.",
+                description: "يساعد الجهاز على اكتشاف تسريبات الغاز ووجود اللهب، مما يوفر حماية إضافية للمنزل والأسرة ويمنحك تنبيهًا مبكرًا عند وجود خطر.",
+                folder: "first_product",
+                images: ["photo_5861603114991948090_y.jpg", "photo_5861603114991948091_y.jpg", "photo_5861603114991948088_y.jpg"]
+            }
+        };
+
+        const productId = new URLSearchParams(window.location.search).get("product");
+        const product = products[productId] || products["gas-detector"];
+        const productTitle = document.querySelector("#product-title");
+
+        document.title = `${product.title} | Safety Home`;
+        productTitle.textContent = product.title;
+        document.querySelector("#product-intro").textContent = product.intro;
+        document.querySelector("#product-description").textContent = product.description;
+
+        const productImages = document.querySelector("#product-images");
+        product.images.forEach((imageName) => {
+            const image = document.createElement("img");
+            image.src = `${product.folder}/${imageName}`;
+            image.alt = product.title;
+            image.className = "product-gallery-image";
+            image.loading = "lazy";
+            productImages.appendChild(image);
+        });
+
+        const whatsappReviews = document.querySelector("#whatsapp-reviews");
+        ["review-1.jpg", "review-2.jpg", "review-3.jpg"].forEach((imageName) => {
+            const image = document.createElement("img");
+            image.src = `${product.folder}/${imageName}`;
+            image.alt = `مراجعة واتساب عن ${product.title}`;
+            image.className = "whatsapp-review-image";
+            image.loading = "lazy";
+            image.addEventListener("error", () => image.remove());
+            image.addEventListener("load", () => whatsappReviews.querySelector(".empty-gallery")?.remove());
+            whatsappReviews.appendChild(image);
+        });
+
+        const bookingMessage = encodeURIComponent(`مرحبًا، أريد حجز هذا المنتج: ${product.title}`);
+        document.querySelector("#booking-link").href = `https://wa.me/201287957733?text=${bookingMessage}`;
+    </script>
+    <a class="floating-whatsapp" href="https://wa.me/201287957733" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب">واتساب</a>
+</body>
+</html>

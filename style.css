@@ -322,8 +322,14 @@ body {
 }
 
 .image-box {
+    /* اظبط شغلك عشان احبك */
+    width: 100%;
     height: 220px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
 }
 
 .image-box a,
@@ -334,7 +340,7 @@ body {
 }
 
 .product-image {
-    object-fit: cover;
+    object-fit: contain;
     transition: var(--transition);
 }
 
@@ -351,6 +357,17 @@ body {
     margin: 20px 0 8px;
     color: var(--primary-blue);
     font-size: 1.25rem;
+}
+
+.stock-badge {
+    display: inline-block;
+    margin: 0 22px 8px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #e8f6ee;
+    color: #1f7a45;
+    font-size: 0.82rem;
+    font-weight: 700;
 }
 
 .product-card p {
@@ -411,6 +428,24 @@ body {
 
 .product-details-trigger {
     cursor: pointer;
+}
+
+.floating-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2100;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: #168c4b;
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.floating-whatsapp:hover {
+    background: #0f6f3a;
 }
 
 /* =========================================================
@@ -483,6 +518,96 @@ body {
     line-height: 1.9;
 }
 
+.reviews-section {
+    margin: 24px 0;
+    padding: 22px;
+    border: 1px solid rgba(10, 61, 98, 0.15);
+    border-radius: 6px;
+    background: #f8fafb;
+}
+
+.reviews-section h3 {
+    margin-bottom: 16px;
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+}
+
+.reviews-list {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.review-item {
+    padding: 14px;
+    border-right: 3px solid var(--accent-orange);
+    background: #fff;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.review-rating {
+    color: var(--accent-orange);
+    letter-spacing: 0;
+}
+
+.review-item p,
+.no-reviews {
+    margin: 0;
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+.review-form {
+    display: grid;
+    gap: 12px;
+}
+
+.review-form label {
+    display: grid;
+    gap: 6px;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(10, 61, 98, 0.2);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--text-dark);
+    font: inherit;
+}
+
+.review-form textarea {
+    resize: vertical;
+}
+
+.review-submit {
+    justify-self: start;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--primary-blue);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.review-submit:hover {
+    background: var(--primary-dark);
+}
+
 /* =========================================================
    7. Footer
 ========================================================= */
@@ -507,6 +632,113 @@ footer a {
 
 footer a:hover {
     color: #F39C12;
+}
+
+/* Product details page */
+.details-page {
+    min-height: 100vh;
+    background: #f4f7f8;
+}
+
+.details-navbar {
+    position: relative;
+    background: var(--primary-dark);
+}
+
+.back-link {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: var(--accent-orange);
+}
+
+.product-details-page {
+    width: min(1050px, 92%);
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.details-page-header {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.details-eyebrow {
+    margin-bottom: 8px;
+    color: var(--accent-orange);
+    font-weight: 800;
+}
+
+.details-page-header h1 {
+    margin-bottom: 12px;
+    color: var(--primary-blue);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.details-page-header p:last-child {
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+.details-page-section {
+    margin-bottom: 28px;
+    padding: 28px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(10, 61, 98, 0.08);
+}
+
+.details-page-section h2 {
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+.product-gallery,
+.whatsapp-reviews-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.product-gallery-image,
+.whatsapp-review-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.whatsapp-review-image {
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    background: #f4f7f8;
+}
+
+.section-note,
+.empty-gallery,
+.product-story-section p {
+    color: var(--text-dark);
+    line-height: 1.9;
+}
+
+.empty-gallery {
+    grid-column: 1 / -1;
+    padding: 20px;
+    border: 1px dashed rgba(10, 61, 98, 0.3);
+    text-align: center;
+}
+
+.details-booking {
+    width: min(360px, 100%);
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
 }
 
 /* =========================================================
@@ -536,5 +768,27 @@ footer a:hover {
 
     .details-image {
         height: 140px;
+    }
+
+    .details-navbar {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .product-details-page {
+        padding: 45px 0;
+    }
+
+    .details-page-section {
+        padding: 20px 16px;
+    }
+
+    .product-gallery,
+    .whatsapp-reviews-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .product-gallery-image {
+        height: 220px;
     }
 }
