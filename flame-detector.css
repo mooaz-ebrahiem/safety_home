@@ -4,14 +4,14 @@
 ========================================================= */
 
 #fd-page {
-    --fd-blue: #0A3D62;
-    --fd-blue-dark: #062A43;
-    --fd-orange: #E67E22;
-    --fd-orange-hover: #F39C12;
+    --fd-blue: rgb(18, 43, 67);
+    --fd-blue-dark: rgb(18, 43, 67);
+    --fd-orange: rgb(215, 25, 33);
+    --fd-orange-hover: rgb(180, 20, 28);
     --fd-text: #2C3E50;
     --fd-bg: #f4f7f8;
     --fd-white: #fff;
-    --fd-border: rgba(10, 61, 98, 0.15);
+    --fd-border: rgba(18, 43, 67, 0.15);
 
     margin: 0;
     font-family: 'Cairo', sans-serif;
@@ -63,7 +63,7 @@
     padding: 28px;
     border-radius: 8px;
     background: var(--fd-white);
-    box-shadow: 0 8px 22px rgba(10, 61, 98, 0.08);
+    box-shadow: 0 8px 22px rgba(18, 43, 67, 0.08);
 }
 
 .fd-section-title {
@@ -282,7 +282,7 @@
     grid-column: 1 / -1;
     margin: 0;
     padding: 18px;
-    border: 1px dashed rgba(10, 61, 98, 0.3);
+    border: 1px dashed rgba(18, 43, 67, 0.3);
     border-radius: 6px;
     text-align: center;
 }

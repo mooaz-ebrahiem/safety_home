@@ -4,14 +4,14 @@
 ========================================================= */
 
 #gd-page {
-    --gd-blue: #0A3D62;
-    --gd-blue-dark: #062A43;
-    --gd-orange: #E67E22;
-    --gd-orange-hover: #F39C12;
+    --gd-blue: rgb(18, 43, 67);
+    --gd-blue-dark: rgb(18, 43, 67);
+    --gd-orange: rgb(215, 25, 33);
+    --gd-orange-hover: rgb(180, 20, 28);
     --gd-text: #2C3E50;
     --gd-bg: #f4f7f8;
     --gd-white: #fff;
-    --gd-border: rgba(10, 61, 98, 0.15);
+    --gd-border: rgba(18, 43, 67, 0.15);
 
     margin: 0;
     font-family: 'Cairo', sans-serif;
@@ -63,7 +63,7 @@
     padding: 28px;
     border-radius: 8px;
     background: var(--gd-white);
-    box-shadow: 0 8px 22px rgba(10, 61, 98, 0.08);
+    box-shadow: 0 8px 22px rgba(18, 43, 67, 0.08);
 }
 
 .gd-section-title {
@@ -286,7 +286,7 @@
     grid-column: 1 / -1;
     margin: 0;
     padding: 18px;
-    border: 1px dashed rgba(10, 61, 98, 0.3);
+    border: 1px dashed rgba(18, 43, 67, 0.3);
     border-radius: 6px;
     text-align: center;
 }
